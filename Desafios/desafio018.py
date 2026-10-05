@@ -1,4 +1,5 @@
 class Churrasco:
+
     def __init__(self, t = "", p = ""):
         self.titulo = t
         self.QuantPessoas = p

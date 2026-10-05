@@ -1,11 +1,15 @@
 class Funcionario:
-    def __init__(self, n = "",s = "",c = ""):
+    #Atributo de classe
+    empresa = "Itau"
+
+    def __init__(self, n="", s="", c=""):
         self.nome = n
-        self.setor = s 
+        self.setor = s
         self.cargo = c
 
-    def __getstate__(self):
-        return f"ola, eu sou {self.nome} e sou {self.cargo} no setor de {self.setor} e trabalho no Itáu!"
+    def apresentacao(self) -> str:
+        return f"ola, eu sou {self.nome} e sou {self.cargo} no setor de {self.setor} da empresa {Funcionario.empresa}!"
+
 
 c1 = Funcionario("Uanderson", "TI", "Desenvolvedor")
-print(c1.__getstate__()) 
+print(c1.apresentacao())
