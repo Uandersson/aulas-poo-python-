@@ -5,7 +5,10 @@ class Produto:
 
     def etiqueta(self):
         return f"{self.nome} custa R${self.preço:,.2f}"
-
+    
 
 c1 = Produto("Samsung S26 Ultra", 11.784)
 print(c1)
+c1 = Produto("Samsung S26 Ultra", 8_000)
+print(c1.etiqueta())
+
