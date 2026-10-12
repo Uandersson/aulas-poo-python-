@@ -10,7 +10,7 @@ class Livro:
 
     def avancar_paginas(self, qnt=1):
         cont = 0
-        for pg in range(0, qnt, 1):
+        for pg in range(0, qnt, 1): 
             if not self.fim_do_livro():
                 self.pagina_atual += 1
                 print(f"Pag => {self.pagina_atual} ", end='')
