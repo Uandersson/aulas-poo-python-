@@ -58,12 +58,11 @@ class ControleRemoto:
                 else:
                     print(f"{volume}", end = "")
 
-             
-
+            
 c = ControleRemoto()
 while True:
     c.mostrar_tv()
-    comando = str(input(f"\n < CANAL >   - VOL + "))
+    comando = str(input(f"\n < CANAL {c.canal_atual} >   - VOL {c.volume_atual} + "))
     match comando:
         case '0':
             break  
