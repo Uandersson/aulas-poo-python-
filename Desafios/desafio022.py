@@ -58,7 +58,6 @@ class ControleRemoto:
                 else:
                     print(f"{volume}", end = "")
 
-             
 
 c = ControleRemoto()
 while True:
