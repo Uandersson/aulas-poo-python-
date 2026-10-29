@@ -33,7 +33,7 @@ class Circulo(Poligono):
         self.raio = r
 
     def perimetro(self):
-        return f"Esse é o perimetro do circulo, {2 * self.raio * 3.14159:.2f}."
+        return f"Esse é o perimetro do circulo, {2 * self.raio * 3.14159:.2f}"
 
     def area(self):
         a = 3.14159 * self.raio ** 2
