@@ -14,8 +14,8 @@ class Poligono(ABC):
 
 
 class Quadrado(Poligono):
-    def __init__(self, qtd, ld = 0):
-        super().__init__(qtd)
+    def __init__(self, qtd, ld):
+        super().__init__( )
         self.lado = ld
 
     def perimetro(self):
@@ -40,11 +40,11 @@ class Circulo(Poligono):
         return f"Essa é área do circulo, {a:.2f}"
 
 
-w1 = Quadrado(20, 20)
+w1 = Quadrado(0, 12)
 print(w1.perimetro())
 print(w1.area())
 
 
-w = Circulo(8, 14)
+w = Circulo(8, 12)
 print(w.perimetro())
 print(w.area())
