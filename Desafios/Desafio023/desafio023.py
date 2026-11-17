@@ -14,37 +14,37 @@ class Poligono(ABC):
 
 
 class Quadrado(Poligono):
-    def __init__(self, qtd, ld):
-        super().__init__( )
+    def __init__(self, ld):
+        super().__init__(4)
         self.lado = ld
 
     def perimetro(self):
         self.lado * 4
-        return f"O perímetro do quadrado é {self.lado * 4}."
+        return f"Um quadro de lado {self.lado}cm tem perímetro de {self.lado * 4}cm."
     
     def area(self):
         self.lado * self.lado
-        return f"Essa a área do quadrado, {self.lado * self.lado} "
+        return f"Um quadro de lado {self.lado}cm tem área de {self.lado * self.lado}cm."
 
 
 class Circulo(Poligono):
-    def __init__(self, qtd, r):
-        super().__init__(qtd)
+    def __init__(self, r = 1):
+        super().__init__(0)
         self.raio = r
 
     def perimetro(self):
-        return f"Esse é o perimetro do circulo, {2 * self.raio * 3.14159:.2f}"
+        return f"Um circulo de raio {self.raio}cm tem perímetro de {2 * self.raio * 3.14159:.2f}cm."
 
     def area(self):
         a = 3.14159 * self.raio ** 2
-        return f"Essa é área do circulo, {a:.2f}"
+        return f"Um circulo de raio {self.raio}cm tem área de {a:.2f}cm."
 
 
-w1 = Quadrado(0, 12)
+w1 = Quadrado(20)
 print(w1.perimetro())
 print(w1.area())
 
 
-w = Circulo(8, 12)
+w = Circulo(12)
 print(w.perimetro())
 print(w.area())

@@ -27,7 +27,7 @@ class Caminhao(Transporte):
         super().__init__(dis)
 
     def calc_frete(self):
-        if self.distancia >= 50:
+        if self.distancia > 50:
             self.frete = self.distancia * self.fator
             return f"R$ {self.frete:.2f}"
         else:
@@ -41,7 +41,7 @@ class Drone(Transporte):
         super().__init__(dis)
 
     def calc_frete(self):
-        if self.distancia <= 10:
+        if self.distancia < 10:
            self.frete = self.distancia * self.fator
            return f"R$ {self.frete:.2f}"
         else:
